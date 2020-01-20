@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Word Search Game</string>
+    <string name="button_start">Start!</string>
+    <string name="title_activity_ending_screen">EndingScreen</string>
+    <string name="button_instructions">Instructions</string>
+    <string name="MOBILE">MOBILE</string>
+    <string name="VARIABLE">VARIABLE</string>
+    <string name="SWIFT">SWIFT</string>
+    <string name="OBJECTIVEC">OBJECTIVEC</string>
+    <string name="JAVA">JAVA</string>
+    <string name="KOTLIN">KOTLIN</string>
+</resources>
