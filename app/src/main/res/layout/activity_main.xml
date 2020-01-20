@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="162dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="32dp"
         android:background="@color/androidGreen"
         android:gravity="center"
         android:text="Welcome to Richard's Word Search Game"
@@ -25,7 +25,7 @@
         android:id="@+id/instructions_button"
         android:layout_width="0dp"
         android:layout_height="82dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:background="@color/androidGreen"
         android:onClick="startInstructions"
         android:text="@string/button_instructions"
@@ -34,17 +34,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="219dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="28dp"
         android:background="@color/androidGreen"
         android:onClick="startGame"
-        android:text="@string/button_start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructions_button" />
+        app:layout_constraintTop_toBottomOf="@+id/instructions_button"
+        app:srcCompat="@android:drawable/ic_media_play"
+        tools:layout_editor_absoluteY="610dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

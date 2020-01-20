@@ -137,7 +137,6 @@ public class Game extends AppCompatActivity {
 
     public boolean overlap(Words w, Board gameBoard){
         int size = w.getSize();
-        ArrayList<Integer> directions = new ArrayList<Integer>(w.getDirections());
         int row = w.getLocationRow();
         int col = w.getLocationCol();
         String letters = w.getWord();
@@ -145,7 +144,7 @@ public class Game extends AppCompatActivity {
 
         if (dir == 0){
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row-i, col, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row-i, col, letters.charAt(i))){
                     return true;
                 }
             }
@@ -153,7 +152,7 @@ public class Game extends AppCompatActivity {
 
         else if (dir == 1){
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row-i, col+i, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row-i, col+i, letters.charAt(i))){
                     return true;
                 }
             }
@@ -161,7 +160,7 @@ public class Game extends AppCompatActivity {
 
         else if (dir == 2){
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row, col+i, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row, col+i, letters.charAt(i))){
                     return true;
                 }
             }
@@ -169,7 +168,7 @@ public class Game extends AppCompatActivity {
 
         else if (dir == 3){
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row+i, col+i, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row+i, col+i, letters.charAt(i))){
                     return true;
                 }
             }
@@ -177,7 +176,7 @@ public class Game extends AppCompatActivity {
 
         else if (dir == 4){
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row+i, col, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row+i, col, letters.charAt(i))){
                     return true;
                 }
             }
@@ -185,7 +184,7 @@ public class Game extends AppCompatActivity {
 
         else if (dir == 5){
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row+i, col-i, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row+i, col-i, letters.charAt(i))){
                     return true;
                 }
             }
@@ -193,7 +192,7 @@ public class Game extends AppCompatActivity {
 
         else if (dir == 6){
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row, col-i, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row, col-i, letters.charAt(i))){
                     return true;
                 }
             }
@@ -201,7 +200,7 @@ public class Game extends AppCompatActivity {
 
         else {
             for (int i=0; i < size; i++){
-                if (gameBoard.checkEmptyOrSame(row-i, col-i, letters.charAt(i)) == false){
+                if (!gameBoard.checkEmptyOrSame(row-i, col-i, letters.charAt(i))){
                     return true;
                 }
             }
@@ -624,7 +623,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter1.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -649,7 +648,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter2.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -674,7 +673,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter3.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -699,7 +698,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter4.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -724,7 +723,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter5.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -749,7 +748,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter6.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -774,7 +773,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter7.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -799,7 +798,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter8.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -824,7 +823,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter9.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -849,7 +848,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter10.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -888,7 +887,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter11.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -913,7 +912,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter12.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -938,7 +937,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter13.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -963,7 +962,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter14.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -988,7 +987,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter15.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1013,7 +1012,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter16.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1038,7 +1037,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter17.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1063,7 +1062,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter18.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1088,7 +1087,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter19.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1113,7 +1112,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter20.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1151,7 +1150,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter21.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1176,7 +1175,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter22.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1201,7 +1200,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter23.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1226,7 +1225,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter24.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1251,7 +1250,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter25.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1276,7 +1275,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter26.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1301,7 +1300,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter27.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1326,7 +1325,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter28.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1351,7 +1350,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter29.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1376,7 +1375,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter30.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1414,7 +1413,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter31.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1439,7 +1438,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter32.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1464,7 +1463,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter33.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1489,7 +1488,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter34.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1514,7 +1513,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter35.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1539,7 +1538,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter36.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1564,7 +1563,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter37.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1589,7 +1588,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter38.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1614,7 +1613,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter39.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1639,7 +1638,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter40.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1677,7 +1676,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter41.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1702,7 +1701,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter42.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1727,7 +1726,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter43.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1752,7 +1751,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter44.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1777,7 +1776,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter45.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1802,7 +1801,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter46.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1827,7 +1826,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter47.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1852,7 +1851,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter48.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1877,7 +1876,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter49.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1902,7 +1901,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter50.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1940,7 +1939,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter51.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1965,7 +1964,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter52.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -1990,7 +1989,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter53.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2015,7 +2014,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter54.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2040,7 +2039,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter55.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2065,7 +2064,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter56.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2090,7 +2089,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter57.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2115,7 +2114,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter58.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2140,7 +2139,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter59.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2165,7 +2164,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter60.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2203,7 +2202,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter61.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2228,7 +2227,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter62.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2253,7 +2252,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter63.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2278,7 +2277,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter64.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2303,7 +2302,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter65.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2328,7 +2327,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter66.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2353,7 +2352,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter67.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2378,7 +2377,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter68.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2403,7 +2402,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter69.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2428,7 +2427,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter70.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2466,7 +2465,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter71.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2491,7 +2490,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter72.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2516,7 +2515,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter73.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2541,7 +2540,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter74.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2566,7 +2565,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter75.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2591,7 +2590,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter76.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2616,7 +2615,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter77.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2641,7 +2640,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter78.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2666,7 +2665,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter79.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2691,7 +2690,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter80.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2729,7 +2728,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter81.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2754,7 +2753,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter82.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2779,7 +2778,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter83.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2804,7 +2803,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter84.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2829,7 +2828,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter85.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2854,7 +2853,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter86.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2879,7 +2878,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter87.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2904,7 +2903,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter88.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2929,7 +2928,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter89.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2954,7 +2953,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter90.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -2992,7 +2991,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter91.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3017,7 +3016,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter92.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3042,7 +3041,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter93.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3067,7 +3066,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter94.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3092,7 +3091,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter95.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3117,7 +3116,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter96.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3142,7 +3141,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter97.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3167,7 +3166,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter98.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3192,7 +3191,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter99.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3217,7 +3216,7 @@ public class Game extends AppCompatActivity {
                         clickedLetters.clear();
                         clickedLocations.clear();
                         wordComplete(wordcounter);
-                    };
+                    }
                 }
                 else{
                     letter100.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -3237,7 +3236,6 @@ public class Game extends AppCompatActivity {
         Board gameBoard = createGameBoard();
 
         play(gameBoard);
-
     }
 
 }
