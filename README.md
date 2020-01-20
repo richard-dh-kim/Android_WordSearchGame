@@ -7,20 +7,20 @@ Did not = make a slick UI, make it look good in both portrait and landscape, all
 
 Once the user presses the start button, user will be shown a grid, count of how many words are found, and list of words. Click the letters in a line to form one of the words to be found. Once clicked, the letter will turn green, once the full word have been found, it will turn red, and the word in the list of words to be found will also turn red. The program will only consider the word to be found when the letters of the words are the only letters clicked. When the user finds all 6 words, game will show the ending screen.
 
-![TitleScreen](https://user-images.githubusercontent.com/58959649/72694063-8b855a80-3b01-11ea-9d53-67c597a7ed40.png)
+![TitleScreen](https://user-images.githubusercontent.com/58959649/72731671-24e45900-3b62-11ea-886c-dc02f73789de.png)
 Screen shot of the title screen. Two buttons: 1 for instructions page, and 1 for starting the game.
 
-![InstructionsScreen](https://user-images.githubusercontent.com/58959649/72694067-8b855a80-3b01-11ea-9d14-1e945936fb1b.png)
+![InstructionsScreen](https://user-images.githubusercontent.com/58959649/72731668-244bc280-3b62-11ea-8bb9-8ae36aac0bf2.png)
 Instructions screen. One button to start the game.
 
-![NoLettersSelected](https://user-images.githubusercontent.com/58959649/72694068-8c1df100-3b01-11ea-80a0-ad52d07b77f0.png)
+![NoLettersSelected](https://user-images.githubusercontent.com/58959649/72731670-24e45900-3b62-11ea-88bd-9dfc40874c32.png)
 Screen when no letters are selected.
 
-![FewLettersSelectedButNoWords](https://user-images.githubusercontent.com/58959649/72694065-8b855a80-3b01-11ea-8696-eddc954dc33a.png)
+![FewLettersSelectedButNoWords](https://user-images.githubusercontent.com/58959649/72731674-24e45900-3b62-11ea-9ba2-e628c4947672.png)
 Screen when few letters were selected, but when it did not form a word.
 
-![FewWordsandLettersSelected](https://user-images.githubusercontent.com/58959649/72694066-8b855a80-3b01-11ea-9bfa-6bd97c84f8a4.png)
+![FewWordsandLettersSelected](https://user-images.githubusercontent.com/58959649/72731675-24e45900-3b62-11ea-9083-0cf3964db84b.png)
 Screen when few words have been selected, and few more letters as well.
 
-![EndingScreen](https://user-images.githubusercontent.com/58959649/72694064-8b855a80-3b01-11ea-8ee2-ef67f1826f2c.png)
+![EndingScreen](https://user-images.githubusercontent.com/58959649/72731672-24e45900-3b62-11ea-8469-5b878e6b8f4e.png)
 Screen once user finds all 6 words.
