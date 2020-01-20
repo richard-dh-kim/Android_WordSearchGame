@@ -1,5 +1,5 @@
 # Android_WordSearchGame
-A simple word search game Android app made on Android Studio, using Java.
+A simple word search game Android app made on Android Studio, using Java. Designed for Nexus 5, and emulated on Nexus 5.
 
 Android, 10x10 grid, includes 6 words (OBJECTIVEC, VARIABLE, SWIFT, KOTLIN, MOBILE, JAVA), keeps track of how many words the user has found, randomized the location of the words, instructions screen, and ending screen added.
 
